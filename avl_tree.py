@@ -44,7 +44,7 @@ class BookCatalog: #avl tree
         y.height = 1 + max(self.get_height(y.left), self.get_height(y.right))
         return y #new root
     
-    def _rebalance(self, node):
+    def rebalance(self, node):
         # Update height of the current node
         node.height = 1 + max(self.get_height(node.left), self.get_height(node.right))
         balance = self.get_balance(node)
@@ -130,3 +130,4 @@ class BookCatalog: #avl tree
             current = current.right
     
         return result
+
